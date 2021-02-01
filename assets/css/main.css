@@ -1,0 +1,1082 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+/* Изменение цвета выделения на старнице */
+::-moz-selection {
+  background: #00CF4D !important;
+  color: #fff;
+}
+::selection {
+  background: #00CF4D !important;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #00CF4D !important;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background: #00CF4D !important;
+  color: #fff;
+}
+
+button {
+  border: none;
+  background-color: #00cf4d;
+}
+
+button:hover,
+.start_new:hover {
+  -webkit-box-shadow: 0px 0px 13px 2px #00cf4d;
+  box-shadow: 0px 0px 13px 2px #00cf4d;
+  color: #ffffff !important;
+}
+
+button:focus {
+  outline: none;
+}
+
+.title_text {
+  font-size: 25px;
+  font-weight: 700;
+  color: #253556;
+  padding-bottom: 10px;
+}
+
+textarea::-webkit-scrollbar,
+.moderation_orders::-webkit-scrollbar,
+.active_orders::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  cursor: pointer;
+}
+
+/* Track */
+textarea::-webkit-scrollbar-track,
+.moderation_orders::-webkit-scrollbar-track,
+.active_orders::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+textarea::-webkit-scrollbar-thumb,
+.moderation_orders::-webkit-scrollbar-thumb,
+.active_orders::-webkit-scrollbar-thumb {
+  background: #00cf4d;
+  border-radius: 10px;
+}
+
+.page_ordersAndVacancies {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page_ordersAndVacancies .container {
+  max-width: 1170px;
+  margin: 10px auto;
+}
+
+.page_ordersAndVacancies .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.page_ordersAndVacancies .navbar .logo_header {
+  width: 250px;
+  text-align: center;
+}
+
+.page_ordersAndVacancies .navbar .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -130px;
+}
+
+.page_ordersAndVacancies .navbar .search input {
+  width: 400px;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  border: 1px solid #efefef;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.page_ordersAndVacancies .navbar .search input:focus {
+  border: 1px solid #00cf4d;
+}
+
+.page_ordersAndVacancies .navbar .search .search_btn {
+  width: 40px;
+  height: 40px;
+  background-color: #00cf4d;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.page_ordersAndVacancies .navbar .chat i {
+  cursor: pointer;
+  color: #00cf4d;
+  font-size: 35px;
+  position: relative;
+}
+
+.page_ordersAndVacancies .navbar .chat i span {
+  font-size: 14px;
+  position: absolute;
+  color: #ffffff;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+.page_ordersAndVacancies .navbar .chat .chat_text {
+  background-color: #efefef;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  width: 600px;
+  top: 85px;
+  left: calc(100%/2.05);
+  z-index: 7;
+  display: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.page_ordersAndVacancies .navbar .chat .chat_text li {
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.page_ordersAndVacancies .navbar .chat .chat_text li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.page_ordersAndVacancies .navbar .chat .chat_text li a:hover {
+  color: #00cf4d;
+  text-decoration: underline;
+}
+
+.page_ordersAndVacancies .navbar .chat .chat_text li:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00cf4d;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 20px;
+}
+
+.page_ordersAndVacancies .navbar .chat .chat_text:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: calc(100%/1.98);
+  top: -40px;
+  border: 20px solid transparent;
+  border-bottom: 20px solid #efefef;
+}
+
+.page_ordersAndVacancies .navbar .avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid #00cf4d;
+  position: 0;
+}
+
+.page_ordersAndVacancies .navbar .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 2px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page_ordersAndVacancies .menu_item {
+  width: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page_ordersAndVacancies .menu_item .all_category {
+  width: 100%;
+  height: 40px;
+  background-color: #12114a;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page_ordersAndVacancies .menu_item .menu_list {
+  width: 100%;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #100f41;
+  border: 1px solid #00cf4d;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  border-top: none;
+}
+
+.page_ordersAndVacancies .menu_item .menu_list:hover {
+  background-color: #00cf4d;
+  color: #ffffff;
+}
+
+.page_ordersAndVacancies .orders_body {
+  margin-left: 55px;
+  width: 75%;
+}
+
+.page_ordersAndVacancies .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page_ordersAndVacancies .head .orders_btn,
+.page_ordersAndVacancies .head .vacancies_btn {
+  width: 170px;
+  height: 35px;
+  border-radius: 20px;
+  border: 2px solid #00cf4d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.page_ordersAndVacancies .head .vacancies_btn {
+  margin-left: 20px;
+}
+
+.page_ordersAndVacancies .head .count_orders,
+.page_ordersAndVacancies .head .vacancies_orders {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #00cf4d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 10px;
+  background-color: #ffffff;
+}
+
+.page_ordersAndVacancies .head .active_head {
+  background-color: #00cf4d;
+  color: #ffffff;
+}
+
+.page_ordersAndVacancies .head .active_head span {
+  color: #253556;
+}
+
+.page_ordersAndVacancies .orders_page {
+  width: 100%;
+  height: auto;
+  border: 2px solid #c1c4ca;
+  border-radius: 30px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.page_ordersAndVacancies .orders_page .title_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page_ordersAndVacancies .orders_page .title_btns div {
+  width: 160px;
+  height: 30px;
+  border-radius: 20px;
+  border: 2px solid #00cf4d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.page_ordersAndVacancies .orders_page .title_btns .moderation_btn {
+  margin: 0 15px;
+}
+
+.page_ordersAndVacancies .orders_page .title_btns .active_orders_btn {
+  background-color: #00cf4d;
+  color: #ffffff;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions .my_region {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions .my_region i {
+  font-size: 22px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions .my_region input {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  border: 2px solid #c1c4ca;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 50;
+  color: #000;
+  padding: 0 10px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions .my_region input::-webkit-input-placeholder {
+  color: #12114a;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions .my_region input:-ms-input-placeholder {
+  color: #12114a;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions .my_region input::-ms-input-placeholder {
+  color: #12114a;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions .my_region input::placeholder {
+  color: #12114a;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions ul {
+  width: 180px;
+  height: auto;
+  border: 2px solid #c1c4ca;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  z-index: 5;
+  background-color: #ffffff;
+  display: none;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions ul li {
+  width: 100%;
+  height: 25px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions ul li:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .regions ul li:hover {
+  background-color: #00cf4d;
+  color: #ffffff;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .key_text,
+.page_ordersAndVacancies .orders_page .sub_titles .login {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  border: 2px solid #c1c4ca;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .login {
+  margin: 0;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .search_orders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .search_orders input {
+  width: 200px;
+  height: 30px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  border: 2px solid #c1c4ca;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: none;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .search_orders input:focus {
+  border: 1px solid #00cf4d;
+}
+
+.page_ordersAndVacancies .orders_page .sub_titles .search_orders .search_btn {
+  width: 30px;
+  height: 30px;
+  background-color: #00cf4d;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders th {
+  font-size: 14px;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders .id_item {
+  width: 80px;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders .order_item {
+  width: 420px;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders .date_item {
+  width: 160px;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders .actions_item {
+  width: 160px;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders td {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders td i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders .edit,
+.page_ordersAndVacancies .orders_page .active_orders .fa-plus-square {
+  color: #00cf4d;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders .fa-window-close {
+  color: #ff8fb4;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders .fa-external-link-alt {
+  font-size: 18px;
+  color: #00cf4d;
+}
+
+.page_ordersAndVacancies .orders_page .active_orders .actions_list {
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.page_ordersAndVacancies .modal_page_active,
+.page_ordersAndVacancies .modal_page_blocked {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0006;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page_ordersAndVacancies .modal_page_active .modal_item,
+.page_ordersAndVacancies .modal_page_blocked .modal_item {
+  width: 430px;
+  height: 150px;
+  background-color: #efefef;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.page_ordersAndVacancies .modal_page_active .modal_item span,
+.page_ordersAndVacancies .modal_page_blocked .modal_item span {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.page_ordersAndVacancies .modal_page_active .modal_item .fa-check-circle,
+.page_ordersAndVacancies .modal_page_blocked .modal_item .fa-check-circle {
+  color: #00cf4d;
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.page_ordersAndVacancies .modal_page_active .modal_item .close_active,
+.page_ordersAndVacancies .modal_page_blocked .modal_item .close_active {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 25px;
+  color: #ff8fb4;
+  border-radius: 50%;
+  background-color: #efefef;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.page_ordersAndVacancies .modal_page_active .modal_item .blocked,
+.page_ordersAndVacancies .modal_page_blocked .modal_item .blocked {
+  color: #ff8fb4;
+}
+
+.page_ordersAndVacancies .modal_page_editing {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0006;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #253556;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_item {
+  width: 700px;
+  height: auto;
+  background-color: #efefef;
+  border-radius: 10px;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_header h2 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_header .close_editing {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 25px;
+  color: #ff8fb4;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body {
+  padding: 10px 30px;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .title input {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  border: 1px solid #ffffff;
+  color: #253556;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .title input:focus {
+  border: 1px solid #00cf4d;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .left_choose,
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .right_choose {
+  position: relative;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .profession,
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .direction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  width: 310px;
+  height: 30px;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .profession i,
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .direction i {
+  font-size: 22px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .profession input,
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .direction input {
+  width: 310px;
+  height: 30px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0 10px;
+  cursor: pointer;
+  z-index: 0;
+  text-transform: capitalize;
+  outline: none;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .profession input::-webkit-input-placeholder,
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .direction input::-webkit-input-placeholder {
+  color: #12114a;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .profession input:-ms-input-placeholder,
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .direction input:-ms-input-placeholder {
+  color: #12114a;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .profession input::-ms-input-placeholder,
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .direction input::-ms-input-placeholder {
+  color: #12114a;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .profession input::placeholder,
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .direction input::placeholder {
+  color: #12114a;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list ul {
+  width: 310px;
+  height: auto;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  z-index: 5;
+  background-color: #ffffff;
+  display: none;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list ul li {
+  width: 100%;
+  height: 25px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list ul li:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list ul li:hover {
+  background-color: #00cf4d;
+  color: #ffffff;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .direction_list {
+  right: 0;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .choose_list .opened_profession {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .descriptions textarea {
+  width: 100%;
+  outline: none;
+  height: 70px;
+  overflow-y: scroll;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #ffffff;
+  resize: none;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .descriptions textarea:focus {
+  border: 1px solid #00cf4d;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .add_file {
+  position: relative;
+  margin: 15px 10px;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .add_file span {
+  text-decoration: underline;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .add_file input {
+  width: 130px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .add_file i {
+  color: #00cf4d;
+}
+
+.page_ordersAndVacancies .modal_page_editing .modal_body .add_file .added_file {
+  font-size: 14px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+.page_ordersAndVacancies .key_skills input {
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  outline: none;
+  padding: 0 10px;
+  border: none;
+  font-weight: 600;
+}
+
+.page_ordersAndVacancies .key_skills input:focus {
+  border: 1px solid #00cf4d;
+}
+
+.page_ordersAndVacancies .budget,
+.page_ordersAndVacancies .responses,
+.page_ordersAndVacancies .user,
+.page_ordersAndVacancies .status {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.page_ordersAndVacancies .budget span,
+.page_ordersAndVacancies .responses span,
+.page_ordersAndVacancies .user span,
+.page_ordersAndVacancies .status span {
+  font-weight: 500;
+  padding-right: 10px;
+}
+
+.page_ordersAndVacancies .budget i,
+.page_ordersAndVacancies .responses i,
+.page_ordersAndVacancies .user i,
+.page_ordersAndVacancies .status i {
+  padding-right: 10px;
+  color: #00cf4d;
+}
+
+.page_ordersAndVacancies .budget strong,
+.page_ordersAndVacancies .responses strong,
+.page_ordersAndVacancies .user strong,
+.page_ordersAndVacancies .status strong {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.page_ordersAndVacancies .budget big,
+.page_ordersAndVacancies .responses big,
+.page_ordersAndVacancies .user big,
+.page_ordersAndVacancies .status big {
+  color: #00cf4d;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.page_ordersAndVacancies .middle_btns {
+  margin-top: 20px;
+}
+
+.page_ordersAndVacancies .middle_btns button {
+  width: 170px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.page_ordersAndVacancies .middle_btns .blocked {
+  background-color: #ff8fb4;
+  margin-left: 15px;
+}
+
+.page_ordersAndVacancies .middle_btns .blocked:hover {
+  -webkit-box-shadow: 0px 0px 13px 2px #ff8fb4;
+  box-shadow: 0px 0px 13px 2px #ff8fb4;
+}
+
+.page_ordersAndVacancies .buttons {
+  margin-top: 45px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page_ordersAndVacancies .buttons button {
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.page_ordersAndVacancies .buttons button:hover {
+  color: #253556 !important;
+}
+
+.page_ordersAndVacancies .buttons .save_btn {
+  background-color: #ffffff;
+  border: 2px solid #00cf4d;
+}
+
+.page_ordersAndVacancies .buttons .remove_btn {
+  margin-left: 25px;
+  background-color: #ffffff;
+  border: 2px solid #ff8fb4;
+}
+
+.page_ordersAndVacancies .blocked:hover,
+.page_ordersAndVacancies .remove_btn:hover {
+  -webkit-box-shadow: 0px 0px 13px 2px #ff8fb4;
+  box-shadow: 0px 0px 13px 2px #ff8fb4;
+}
+
+.page_ordersAndVacancies .opened_region {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.page_ordersAndVacancies .boxShadow {
+  -webkit-box-shadow: 1px 1px 11px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 1px 1px 11px 0px rgba(50, 50, 50, 0.75);
+}
+/*# sourceMappingURL=main.css.map */

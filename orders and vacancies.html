@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="letcop">
+    <meta name="keywords" content="фриланс-биржа, онлайн биржа">
+    <meta name="description" content="Наша платформа - мост, соединяющий работодателей и исполнителей из разных уголков Мира. Цель компании создать максимально комфортные условия и услуги для Заказчиков и Исполнителей!">
+    <title>Заказы и Вакансии</title>
+    <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/fontawesome-free-5.15.1-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="page_ordersAndVacancies">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo_header">
+              <a href=""><img src="assets/icons/nav_logo.png" alt=""></a>
+            </div>
+            <div class="search">
+              <input type="text" placeholder="Поиск">
+              <div class="search_btn">
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+            <div class="chat">
+              <i class="fas fa-comment">
+                <span>99</span>
+              </i>
+              <div class="chat_text">
+                <ul>
+                  <li><a href="">Чаты администраторов</a> <br>
+                    Этот чат отвечает за то чтобы мы могли отвечать пользователям на вопросы, и общаться с каждым
+                    пользователям от имени “Поддержки” (администрации)
+                  </li> <br>
+                  <li><a href="">Чаты пользователей</a> <br>
+                    Этот чат отвечает за то чтобы мы могли видеть все переписки людей между собой и контролировать
+                    правильность и корректность работы и общения между пользователями, более подробнее еще опишу ниже
+                    внимательно читаем и смотрим всё и вникаем в логику ТЗ и прототипов, будет трудно но всё возможно и
+                    зависит от нашего желания!
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="avatar">
+              <img src="assets/images/user4.png" alt="">
+            </div>
+        </div>
+        <div style="display: flex; margin-top: 25px;">
+            <div class="menu_item">
+                <div class="all_category">
+                  Все категории
+                  <i class="fas fa-bars"></i>
+                </div>
+                <a href="" class="menu_list first_menu">Главная страница</a>
+                <a href="" class="menu_list">Заказы и Вакансии</a>
+                <a href="" class="menu_list">Безопасный платеж</a>
+                <a href="" class="menu_list">Творческая мастерская</a>
+                <a href="" class="menu_list">Реферальная программа</a>
+                <a href="" class="menu_list">Услуги и аукцион </a>
+                <a href="" class="menu_list">Пользователи</a>
+                <a href="" class="menu_list">Верификация</a>
+                <a href="" class="menu_list">Блог и новости </a>
+                <a href="" class="menu_list">Форум</a>
+                <a href="" class="menu_list">Страницы</a>
+                <a href="" class="menu_list">Уведомления </a>
+                <a href="" class="menu_list">Бонусы</a>
+                <a href="" class="menu_list">Работа с почтой</a>
+                <a href="" class="menu_list">Специализации</a>
+                <a href="" class="menu_list">SEO- оптимизация</a>
+                <a href="" class="menu_list">Настройка сайта</a>
+            </div>
+            
+            <div class="orders_body">
+                <div class="orders_vacancies">
+                    <div class="head">
+                        <div class="orders_btn active_head">Заказы <div class="count_orders"><span>5</span></div></div>
+                        <div class="vacancies_btn">Вакансии <div class="vacancies_orders"><span>7</span></div></div>
+                    </div>
+                </div>
+                <section class="orders_page">
+                    <div class="title_btns">
+                        <div class="active_btn">Активные</div>
+                        <div class="moderation_btn active_orders_btn">Модерация</div>
+                        <div class="blocked_btn">Заблокированые</div>
+                    </div>
+                    <div class="sub_titles">
+                      <div class="regions">
+                        <div class="my_region">
+                          <input  type="text" placeholder="Регион" value="Регион" disabled>
+                          <i class="fas fa-sort-up"></i>
+                        </div>
+                          <ul>
+                            <li>Юнусобод</li>
+                            <li>Сергели</li>
+                            <li>Чилонзор</li>
+                            <li>Бектемир</li>
+                          </ul>
+                      </div>
+
+                      <div class="key_text">
+                        <span>Ключевые слова</span>
+                      </div>
+ 
+                      <div class="login">
+                        <span>ID/Логин/E-mail</span>
+                      </div>
+
+                      
+                      <div class="search_orders">
+                       <input type="text" placeholder="Поиск">
+                        <div class="search_btn">
+                          <i class="fas fa-search"></i>
+                        </div>
+                     </div>
+                    </div>
+
+                    
+                <div class="active_orders">
+
+                  <table>
+                    <thead>
+                      <tr>
+                        <th class="id_item">ID</th>
+                        <th class="order_item">Заказ</th>
+                        <th class="date_item">Дата</th>
+                        <th class="actions_item">Действия</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                      <tr class="moderation_list">
+                        <td class="id_list">15</td>
+                        <td class="order_list"><a href=""><i class="fas fa-external-link-alt"></i></a> Создать сайт на Word Press + купите велосипед</td>
+                        <td class="date_list"><span>9 ноября 21:00</span></td>
+                        <td class="actions_list">
+                          <i class="fas fa-plus-square add_active"></i>
+                          <i class="fas fa-pen-square edit"></i> 
+                          <i class="fas fa-window-close"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- End active orders -->
+                </section>
+
+
+            </div>
+            </div>
+        </div>
+
+
+        <!-- Модал увидемления -->
+
+        <div class="modal_page_active" id='activeModal'>
+          <div class="modal_item">
+            <!-- <i class="fas fa-times-circle close_active"></i> -->
+            <span>Ваше заказ активирована </span>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+
+        <!-- Модал Заблокированые -->
+
+        <div class="modal_page_blocked" id = 'blockedModal'>
+          <div class="modal_item">
+            <span>Ваше заказ заблокированное </span>
+            <i class="fas fa-check-circle blocked"></i>
+          </div>
+        </div>
+
+        <!-- модал редактирование -->
+
+        <div class="modal_page_editing" id="editModal">
+          <div class="modal_item">
+            <div class="modal_header">
+              <h2>редактирование</h2>
+              <i class="fas fa-times-circle close_editing"></i>
+            </div>
+            <div class="modal_body">
+              <div class="title">
+                <input type="text" value="Создать сайт на ВП  и велик один">
+              </div>
+              <!-- выбрать профессию -->
+
+              <div class="choose_list">
+                <div class="left_choose">
+                  <div class="profession">
+                    <input type="text" placeholder="выбрать профессию" disabled>
+                    <i class="fas fa-sort-up"></i>
+                  </div>
+                      <ul class="choose_lists">
+                        <li>WEb-дизайн</li>
+                        <li>Web-программирование</li>
+                        <li>Android-программирование</li>
+                       </ul>
+                </div>
+                     
+                <div class="right_choose">
+                  <div class="direction">
+                    <input type="text" placeholder="выбрать направление" disabled>
+                    <i class="fas fa-sort-up"></i>
+                  </div>
+                      <ul class="direction_list">
+                        <li>Макет для Web</li>
+                        <li>WEb-сайт</li>
+                        <li>Web-игра</li>
+                       </ul>
+                </div>
+                </div>
+
+                <div class="descriptions">
+                  <textarea name="descriptions" placeholder="Добавить описания">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Свое послушавшись буквоград своего! Океана рыбного буквоград, вдали свою несколько языкового щеке необходимыми сбить заманивший свой, вопроса единственное? Города снова предложения путь рыбными которое курсивных?</textarea>
+                </div>
+
+                <!-- Добавить файл -->
+                <div class="add_file">
+                  <span>Прекрипите файл</span>
+                  <input type="file" id="addFile">
+                  <i class="fas "></i>
+                  <span class="added_file"></span>
+                </div>
+
+                <!-- Добавить ключевые навыки -->
+
+                <div class="key_skills">
+                  <input type="text" placeholder="Ключевые навыки">
+                </div>
+
+                <div class="budget">
+                  <span>Бюджет: </span> <strong>200</strong>
+                </div>
+
+                <div class="user">
+                  <span>Пользователь: </span> <big>hamillioner</big>
+                </div>
+
+                <div class="responses">
+                  <span>Прием откликов: </span> <strong>14 дней до 9 ноября</strong>
+                </div>
+
+                <div class="status">
+                  <span>Статус: </span> <i>Активный</i> <strong>9 ноября 21:00</strong>
+                </div>
+
+                <div class="middle_btns">
+                  <button class="approved">Одобренна</button>
+                  <button class="blocked">Заблокировать</button>
+                </div>
+
+                <div class="buttons">
+                  <button class="save_btn">Сохранить изменения</button>
+                  <button class="remove_btn">Удалить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="assets/js/jQuery-3-5-1.js"></script>
+        <script src="assets/js/ordersAndVacancies.js"></script>
+</body>
+</html>
