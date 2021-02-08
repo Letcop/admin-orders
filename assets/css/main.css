@@ -536,7 +536,7 @@ textarea::-webkit-scrollbar-thumb,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 10px;
+  margin-left: 100px;
 }
 
 .page_ordersAndVacancies .orders_page .sub_titles .search_orders input {
@@ -635,12 +635,13 @@ textarea::-webkit-scrollbar-thumb,
 }
 
 .page_ordersAndVacancies .modal_page_active,
-.page_ordersAndVacancies .modal_page_blocked {
+.page_ordersAndVacancies .modal_page_blocked,
+.page_ordersAndVacancies .modal_save {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #0006;
-  z-index: 100;
+  z-index: 105;
   top: 0;
   left: 0;
   right: 0;
@@ -655,7 +656,8 @@ textarea::-webkit-scrollbar-thumb,
 }
 
 .page_ordersAndVacancies .modal_page_active .modal_item,
-.page_ordersAndVacancies .modal_page_blocked .modal_item {
+.page_ordersAndVacancies .modal_page_blocked .modal_item,
+.page_ordersAndVacancies .modal_save .modal_item {
   width: 430px;
   height: 150px;
   background-color: #efefef;
@@ -673,20 +675,23 @@ textarea::-webkit-scrollbar-thumb,
 }
 
 .page_ordersAndVacancies .modal_page_active .modal_item span,
-.page_ordersAndVacancies .modal_page_blocked .modal_item span {
+.page_ordersAndVacancies .modal_page_blocked .modal_item span,
+.page_ordersAndVacancies .modal_save .modal_item span {
   font-size: 22px;
   font-weight: 600;
 }
 
 .page_ordersAndVacancies .modal_page_active .modal_item .fa-check-circle,
-.page_ordersAndVacancies .modal_page_blocked .modal_item .fa-check-circle {
+.page_ordersAndVacancies .modal_page_blocked .modal_item .fa-check-circle,
+.page_ordersAndVacancies .modal_save .modal_item .fa-check-circle {
   color: #00cf4d;
   margin-left: 10px;
   font-size: 30px;
 }
 
 .page_ordersAndVacancies .modal_page_active .modal_item .close_active,
-.page_ordersAndVacancies .modal_page_blocked .modal_item .close_active {
+.page_ordersAndVacancies .modal_page_blocked .modal_item .close_active,
+.page_ordersAndVacancies .modal_save .modal_item .close_active {
   position: absolute;
   top: -5px;
   right: -5px;
@@ -699,7 +704,8 @@ textarea::-webkit-scrollbar-thumb,
 }
 
 .page_ordersAndVacancies .modal_page_active .modal_item .blocked,
-.page_ordersAndVacancies .modal_page_blocked .modal_item .blocked {
+.page_ordersAndVacancies .modal_page_blocked .modal_item .blocked,
+.page_ordersAndVacancies .modal_save .modal_item .blocked {
   color: #ff8fb4;
 }
 
@@ -713,7 +719,9 @@ textarea::-webkit-scrollbar-thumb,
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -949,6 +957,75 @@ textarea::-webkit-scrollbar-thumb,
   text-decoration: none;
 }
 
+.page_ordersAndVacancies .modal_page_editing .bloced_page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0006;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 101;
+}
+
+.page_ordersAndVacancies .modal_page_editing .blocked_text {
+  width: 650px;
+  height: 250px;
+  border-radius: 10px;
+  background-color: #efefef;
+  -webkit-box-shadow: 0px 0px 13px 2px #ff8fb4;
+  box-shadow: 0px 0px 13px 2px #ff8fb4;
+  padding: 25px;
+}
+
+.page_ordersAndVacancies .modal_page_editing .blocked_text textarea {
+  width: 100%;
+  height: 110px;
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #ffffff;
+  font-size: 16px !important;
+  margin-top: 20px;
+  resize: none;
+}
+
+.page_ordersAndVacancies .modal_page_editing .blocked_text textarea textarea:focus {
+  border: 1px solid #00cf4d;
+}
+
+.page_ordersAndVacancies .modal_page_editing .blocked_text .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.page_ordersAndVacancies .modal_page_editing .blocked_text button {
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 15px;
+  background-color: #ff8fb4;
+}
+
+.page_ordersAndVacancies .modal_page_editing .blocked_text button:hover {
+  -webkit-box-shadow: 0px 0px 13px 2px #ff8fb4;
+  box-shadow: 0px 0px 13px 2px #ff8fb4;
+}
+
+.page_ordersAndVacancies .key_skills {
+  position: relative;
+}
+
 .page_ordersAndVacancies .key_skills input {
   width: 100%;
   height: 30px;
@@ -961,6 +1038,80 @@ textarea::-webkit-scrollbar-thumb,
 
 .page_ordersAndVacancies .key_skills input:focus {
   border: 1px solid #00cf4d;
+}
+
+.page_ordersAndVacancies .key_skills .fa-plus-circle {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 22px;
+  color: #00cf4d;
+  cursor: pointer;
+  display: none;
+}
+
+.page_ordersAndVacancies .key_skills .key_skills_list {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 15px 10px;
+  position: absolute;
+  display: none;
+}
+
+.page_ordersAndVacancies .key_skills .key_skills_list .fa-times-circle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #ff8fb4;
+  cursor: pointer;
+}
+
+.page_ordersAndVacancies .key_skills .key_skills_list ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.page_ordersAndVacancies .key_skills .key_skills_list ul li {
+  background-color: #efefef;
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.page_ordersAndVacancies .key_skills .added_keys {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.page_ordersAndVacancies .key_skills .added_keys div {
+  background-color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.page_ordersAndVacancies .key_skills .added_keys div i {
+  margin-left: 5px;
+  color: #ff8fb4;
+  cursor: pointer;
+}
+
+.page_ordersAndVacancies .key_skills .added_keys div:hover {
+  background-color: #f8f8fa;
 }
 
 .page_ordersAndVacancies .budget,
@@ -1005,6 +1156,29 @@ textarea::-webkit-scrollbar-thumb,
   font-size: 16px;
 }
 
+.page_ordersAndVacancies .budget input,
+.page_ordersAndVacancies .responses input,
+.page_ordersAndVacancies .user input,
+.page_ordersAndVacancies .status input {
+  outline: none;
+  border: none;
+  width: 70px;
+  height: 25px;
+  border-radius: 3px;
+  border: 1px solid #ffffff;
+  padding: 0 5px;
+  font-weight: 600;
+  color: #253556;
+  text-align: center;
+}
+
+.page_ordersAndVacancies .budget input:focus,
+.page_ordersAndVacancies .responses input:focus,
+.page_ordersAndVacancies .user input:focus,
+.page_ordersAndVacancies .status input:focus {
+  border: 1px solid #00cf4d;
+}
+
 .page_ordersAndVacancies .middle_btns {
   margin-top: 20px;
 }
@@ -1016,12 +1190,12 @@ textarea::-webkit-scrollbar-thumb,
   cursor: pointer;
 }
 
-.page_ordersAndVacancies .middle_btns .blocked {
+.page_ordersAndVacancies .middle_btns .blocked_order {
   background-color: #ff8fb4;
   margin-left: 15px;
 }
 
-.page_ordersAndVacancies .middle_btns .blocked:hover {
+.page_ordersAndVacancies .middle_btns .blocked_order:hover {
   -webkit-box-shadow: 0px 0px 13px 2px #ff8fb4;
   box-shadow: 0px 0px 13px 2px #ff8fb4;
 }
@@ -1064,6 +1238,115 @@ textarea::-webkit-scrollbar-thumb,
   border: 2px solid #ff8fb4;
 }
 
+.page_ordersAndVacancies .user_page {
+  position: absolute;
+  top: 55px;
+  right: 330px;
+  width: 430px;
+  height: 320px;
+  background-color: #f8f8fa;
+  border-radius: 10px;
+  z-index: 102;
+  -webkit-box-shadow: 0px 0px 18px 2px #c1c4ca;
+  box-shadow: 0px 0px 18px 2px #c1c4ca;
+  padding: 20px;
+  display: none;
+}
+
+.page_ordersAndVacancies .user_page .title {
+  text-align: center;
+}
+
+.page_ordersAndVacancies .user_page .title h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.page_ordersAndVacancies .user_page .title i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #ff8fb4;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-size: 17px;
+}
+
+.page_ordersAndVacancies .user_page .body {
+  margin-top: 30px;
+}
+
+.page_ordersAndVacancies .user_page .body .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page_ordersAndVacancies .user_page .body .head .avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid #00cf4d;
+  position: relative;
+}
+
+.page_ordersAndVacancies .user_page .body .head .avatar img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 1px;
+  vertical-align: middle;
+}
+
+.page_ordersAndVacancies .user_page .body .head .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+}
+
+.page_ordersAndVacancies .user_page .body .head .info a {
+  color: #00cf4d;
+  padding: 5px 0;
+}
+
+.page_ordersAndVacancies .user_page .body .head .info .type {
+  color: #00cf4d;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+.page_ordersAndVacancies .user_page .body .basic_info {
+  margin-top: 30px;
+}
+
+.page_ordersAndVacancies .user_page .body .basic_info strong {
+  font-weight: 500;
+}
+
+.page_ordersAndVacancies .user_page .body .basic_info span {
+  padding-left: 10px;
+  color: #100f41;
+  font-size: 15px;
+}
+
+.page_ordersAndVacancies .user_page .body .basic_info .pass {
+  color: #00cf4d;
+}
+
 .page_ordersAndVacancies .blocked:hover,
 .page_ordersAndVacancies .remove_btn:hover {
   -webkit-box-shadow: 0px 0px 13px 2px #ff8fb4;
@@ -1078,5 +1361,17 @@ textarea::-webkit-scrollbar-thumb,
 .page_ordersAndVacancies .boxShadow {
   -webkit-box-shadow: 1px 1px 11px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 1px 1px 11px 0px rgba(50, 50, 50, 0.75);
+}
+
+.page_ordersAndVacancies .key_skills_class {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border: 1px solid #00cf4d;
+  border-top: none;
+}
+
+.page_ordersAndVacancies .key_skills_input {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
 /*# sourceMappingURL=main.css.map */

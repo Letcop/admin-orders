@@ -22,7 +22,21 @@ let direction = document.querySelector('.direction');
 let directionLists = document.querySelectorAll('.right_choose ul li');
 let editOrders = document.querySelectorAll('td .edit');
 let editModal = document.getElementById('editModal');
-let closeEditing = document.querySelector('.close_editing')
+let closeEditing = document.querySelector('.close_editing');
+let blockedOrderBtn = document.querySelector('.blocked_order');
+let blockedText = document.querySelector('.bloced_page');
+let blockedEditBtn = document.querySelector('.blocked_text button');
+let userPage = document.querySelector('.user_page');
+let userInfoOpen = document.querySelector('.modal_body .user big');
+let saveBtn = document.querySelector('.buttons .save_btn');
+let saveModal = document.querySelector('.modal_save');
+let keySkills = document.querySelector('.key_skills input');
+let addedKeys = document.querySelector('.added_keys');
+let skillsList = document.querySelector('.key_skills_list');
+let closeKeys = document.querySelector('.key_skills_list i');
+let btnAddKeys = document.querySelector('.key_skills .addKeys');
+let keySkillsList = document.querySelectorAll('.key_skills_list li');
+
 
 // start chat
 showChat.addEventListener('click', () => {
@@ -284,5 +298,101 @@ direction.addEventListener('click', () => {
   }
   
 });
+
+// Блокировать
+
+blockedOrderBtn.addEventListener('click', () => {
+  blockedText.style.display = 'flex'
+});
+
+blockedEditBtn.addEventListener('click', () => {
+  blockedText.style.display = 'none'
+});
+
+
+userInfoOpen.addEventListener('mouseover', () => {
+  userPage.style.display = 'block'
+});
+userInfoOpen.addEventListener('mouseout', () => {
+  userPage.style.display = 'none'
+})
+
+saveBtn.addEventListener('click', () => {
+  saveModal.style.display = 'flex'
+})
+
+
+// Добавить ключевые навыки
+
+keySkills.addEventListener('click', () => {
+  skillsList.style.display = 'block';
+  keySkills.nextElementSibling.classList.add('key_skills_class');
+  keySkills.classList.add('key_skills_input');
+});
+
+keySkillsList.forEach(elem => {
+  elem.addEventListener('click', () => {
+    skillsList.style.display = 'none'
+    keySkills.classList.remove('key_skills_input');
+
+    let div = document.createElement('div');
+    addedKeys.append(div)
+    div.textContent = elem.innerText
+
+    let i = document.createElement('i');
+    i.className = 'fas fa-times-circle' 
+    div.append(i);
+
+    let removeKey = document.querySelectorAll('.added_keys i')
+
+    removeKey.forEach(ithis => {
+      ithis.addEventListener('click', () => {
+        ithis.parentElement.remove()
+      })
+    })
+
+  })
+  
+})
+
+closeKeys.addEventListener('click', () => {
+  console.dir(closeKeys)
+  skillsList.style.display = 'none'
+  keySkills.classList.remove('key_skills_input');
+});
+
+keySkills.addEventListener('keyup', () => {
+  btnAddKeys.style.display = 'block';
+  
+})
+
+  btnAddKeys.addEventListener('click', () => {
+
+console.dir(keySkills)
+
+
+  let div1 = document.createElement('div');
+  addedKeys.append(div1);
+  div1.textContent = keySkills.value
+
+  let i = document.createElement('i');
+    i.className = 'fas fa-times-circle' 
+    div1.append(i);
+  
+  skillsList.style.display = 'none'
+  keySkills.classList.remove('key_skills_input');
+
+  keySkills.value = ''
+  btnAddKeys.style.display = 'none';
+
+  let removeKey = document.querySelectorAll('.added_keys i')
+
+  removeKey.forEach(ithis => {
+    ithis.addEventListener('click', () => {
+      ithis.parentElement.remove()
+    })
+  })
+
+ })
 
 })();

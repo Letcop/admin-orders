@@ -98,17 +98,17 @@
                           </ul>
                       </div>
 
-                      <div class="key_text">
+                      <!-- <div class="key_text">
                         <span>Ключевые слова</span>
                       </div>
  
                       <div class="login">
                         <span>ID/Логин/E-mail</span>
-                      </div>
+                      </div> -->
 
                       
                       <div class="search_orders">
-                       <input type="text" placeholder="Поиск">
+                       <input type="text" placeholder="ID/Логин/E-mail">
                         <div class="search_btn">
                           <i class="fas fa-search"></i>
                         </div>
@@ -244,7 +244,15 @@
         <div class="modal_page_active" id='activeModal'>
           <div class="modal_item">
             <!-- <i class="fas fa-times-circle close_active"></i> -->
-            <span>Ваше заказ активирована </span>
+            <span>Aктивирован</span>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+
+        <!-- Модал сохранить -->
+        <div class="modal_save">
+          <div class="modal_item">
+            <span>изменения были сохранены</span>
             <i class="fas fa-check-circle"></i>
           </div>
         </div>
@@ -253,7 +261,7 @@
 
         <div class="modal_page_blocked" id = 'blockedModal'>
           <div class="modal_item">
-            <span>Ваше заказ заблокированное </span>
+            <span>Заблокирован</span>
             <i class="fas fa-check-circle blocked"></i>
           </div>
         </div>
@@ -261,21 +269,21 @@
         <!-- модал редактирование -->
 
         <div class="modal_page_editing" id="editModal">
-          <div class="modal_item">
+          <form class="modal_item">
             <div class="modal_header">
               <h2>редактирование</h2>
               <i class="fas fa-times-circle close_editing"></i>
             </div>
             <div class="modal_body">
               <div class="title">
-                <input type="text" value="Создать сайт на ВП  и велик один">
+                <input type="text" name="" value="Создать сайт на ВП  и велик один">
               </div>
               <!-- выбрать профессию -->
 
               <div class="choose_list">
                 <div class="left_choose">
                   <div class="profession">
-                    <input type="text" placeholder="выбрать профессию" disabled>
+                    <input type="text" name="" placeholder="выбрать профессию" disabled>
                     <i class="fas fa-sort-up"></i>
                   </div>
                       <ul class="choose_lists">
@@ -287,7 +295,7 @@
                      
                 <div class="right_choose">
                   <div class="direction">
-                    <input type="text" placeholder="выбрать направление" disabled>
+                    <input type="text" name="" placeholder="выбрать направление" disabled>
                     <i class="fas fa-sort-up"></i>
                   </div>
                       <ul class="direction_list">
@@ -305,7 +313,7 @@
                 <!-- Добавить файл -->
                 <div class="add_file">
                   <span>Прекрипите файл</span>
-                  <input type="file" id="addFile">
+                  <input type="file" name="" id="addFile">
                   <i class="fas "></i>
                   <span class="added_file"></span>
                 </div>
@@ -313,19 +321,45 @@
                 <!-- Добавить ключевые навыки -->
 
                 <div class="key_skills">
-                  <input type="text" placeholder="Ключевые навыки">
+                  <input type="text" name="" placeholder="Ключевые навыки">
+                  <div class="key_skills_list">
+                    <h5>Рекомендуемые навыки</h5>
+                    <i class="fas fa-times-circle"></i>
+                    <ul>
+                      <li>HTML5</li>
+                      <li>CSS3</li>
+                      <li>JavaScript</li>
+                      <li>jQuery</li>
+                      <li>React.js</li>
+                      <li>Vue.js</li>
+                      <li>Angular.js</li>
+                      <li>PHP</li>
+                      <li>Wordpress</li>
+                      <li>Python</li>
+                      <li>Django</li>
+                      <li>Node.js</li>
+                      <li>Java</li>
+                      <li>Photoshop</li>
+                      <li>Figma</li>
+                    </ul>
+                  </div>
+
+                  
+                  <div class="added_keys"></div>
+                  <i class="fas fa-plus-circle addKeys"></i>
+
                 </div>
 
                 <div class="budget">
-                  <span>Бюджет: </span> <strong>200</strong>
+                  <span>Бюджет: </span> <input type="number" value="200">
                 </div>
 
                 <div class="user">
-                  <span>Пользователь: </span> <big>hamillioner</big>
+                  <span>Пользователь: </span> <big>Hamillioner</big>
                 </div>
 
                 <div class="responses">
-                  <span>Прием откликов: </span> <strong>14 дней до 9 ноября</strong>
+                  <span>Прием откликов: </span> <input type="number" value="14"> <strong>дней до </strong><strong> 9 ноября</strong>
                 </div>
 
                 <div class="status">
@@ -333,13 +367,51 @@
                 </div>
 
                 <div class="middle_btns">
-                  <button class="approved">Одобренна</button>
-                  <button class="blocked">Заблокировать</button>
+                  <button type="button" class="blocked_order">Заблокировать</button>
                 </div>
 
                 <div class="buttons">
-                  <button class="save_btn">Сохранить изменения</button>
+                  <button type="submit" class="save_btn">Сохранить изменения</button>
                   <button class="remove_btn">Удалить</button>
+                </div>
+              </div>
+
+           
+            </form>
+   
+            <form class="bloced_page">
+              <div class="blocked_text">
+                <h3>Причина блокировки</h3>
+                <textarea name="" placeholder="Напишите причину блокировки"></textarea>
+              <div class="btn">
+                <button type="submit">Блокировка</button>
+              </div>
+              </div>
+            </form>
+
+            <div class="user_page">
+              <div class="title">
+                <h3>Информация о пользователе</h3>    
+                <!-- <i class="fas fa-times-circle close_user_page"></i> -->
+              </div>
+              <div class="body">
+                <div class="head">
+                  <div class="avatar">
+                    <img src="assets/images/user4.png" alt="">
+                  </div>
+                  <div class="info">
+                    <strong>Тимур Касымов</strong>
+                    <a href="">Hamillioner</a>
+                    <span>Тип аккаунта: <span class="type">Исполнитель</span></span>
+                  </div>
+                </div>
+                <div class="basic_info">
+                  <strong>Паспорт: </strong><span class="pass">Не верефицирован</span><br>
+                  <strong>Телефон: </strong><span>+998903200723</span><br>
+                  <strong>E-mail: </strong><span>hamillioners@gmail.com</span><br>
+                  <strong>Регистрация: </strong><span>12.20.2020</span><br>
+                  <strong>Активность: </strong><span>9 ноября 21:00</span><br>
+                  <strong>Страна: </strong><span>Узбекистан</span>
                 </div>
               </div>
             </div>
