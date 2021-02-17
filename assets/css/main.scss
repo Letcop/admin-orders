@@ -72,7 +72,9 @@ button:focus {
 // scroll
 textarea::-webkit-scrollbar,
 .moderation_orders::-webkit-scrollbar,
-.active_orders::-webkit-scrollbar {
+.active_orders::-webkit-scrollbar,
+.active_vacancy::-webkit-scrollbar,
+.modal_item::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   cursor: pointer;
@@ -80,7 +82,9 @@ textarea::-webkit-scrollbar,
 /* Track */
 textarea::-webkit-scrollbar-track,
 .moderation_orders::-webkit-scrollbar-track,
-.active_orders::-webkit-scrollbar-track {
+.active_vacancy::-webkit-scrollbar-track,
+.active_orders::-webkit-scrollbar-track,
+.modal_item::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
   border-radius: 10px;
 }
@@ -88,7 +92,9 @@ textarea::-webkit-scrollbar-track,
 /* Handle */
 textarea::-webkit-scrollbar-thumb,
 .moderation_orders::-webkit-scrollbar-thumb,
-.active_orders::-webkit-scrollbar-thumb {
+.active_vacancy::-webkit-scrollbar-thumb,
+.active_orders::-webkit-scrollbar-thumb,
+.modal_item::-webkit-scrollbar-thumb {
   background: $primary-color; 
   border-radius: 10px;
 }
@@ -301,7 +307,8 @@ textarea::-webkit-scrollbar-thumb,
   
  
 
-  .orders_page {
+  .orders_page,
+  .vacancy_page {
     width: 100%;
     height: auto;
     border: 2px solid $divider-color-text;
@@ -309,7 +316,8 @@ textarea::-webkit-scrollbar-thumb,
     margin-top: 20px;
     padding: 20px;
 
-    .title_btns {
+    .title_btns,
+    .title_btns_vacancy {
       display: flex;
       align-items: center;
       div {
@@ -322,10 +330,12 @@ textarea::-webkit-scrollbar-thumb,
         font-weight: 500;
         cursor: pointer;
       }
-      .moderation_btn {
+      .moderation_btn,
+      .moderation_btn_vacancy {
         margin: 0 15px;
       }
-      .active_orders_btn {
+      .active_orders_btn,
+      .active_vacancy_btn {
         background-color: $primary-color;
         color: $primary-color-text;
       }
@@ -335,7 +345,8 @@ textarea::-webkit-scrollbar-thumb,
       margin: 20px 0;
       display: flex;
       align-items: center;
-      .regions {
+      .regions,
+      .regions_vacacy {
         .my_region {
           display: flex;
           align-items: center;
@@ -447,7 +458,8 @@ textarea::-webkit-scrollbar-thumb,
     }
 
 
-    .active_orders {
+    .active_orders,
+    .active_vacancy {
       max-height: 400px;
       overflow-y: scroll;
   
@@ -456,9 +468,6 @@ textarea::-webkit-scrollbar-thumb,
       }
       .id_item {
         width: 80px;
-      }
-      .order_item {
-        width: 420px;
       }
       .date_item {
         width: 160px;
@@ -474,7 +483,13 @@ textarea::-webkit-scrollbar-thumb,
         i {
           font-size: 24px;
           cursor: pointer;
+          padding-right: 10px;
         }
+      }
+      
+      .order_item,
+      .vacancy_item {
+        width: 420px;
       }
       .edit,
       .fa-plus-square {
@@ -491,6 +506,9 @@ textarea::-webkit-scrollbar-thumb,
         padding: 0 30px;
         display: flex;
         justify-content: space-around;
+        .edit_vacancy {
+          color: $primary-color;
+        }
       }
     }
   }
@@ -503,7 +521,7 @@ textarea::-webkit-scrollbar-thumb,
     width: 100%;
     height: 100%;
     background-color: #0006;
-    z-index: 105;
+    z-index: 111;
     top: 0;
     left: 0;
     right: 0;
@@ -545,6 +563,91 @@ textarea::-webkit-scrollbar-thumb,
     }
   }
 
+  // Модал блокировки
+
+  
+  .bloced_page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0006;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
+
+    
+    .blocked_text {
+      width: 650px;
+      height: 350px;
+      border-radius: 10px;
+      background-color: $divider-color;
+      -webkit-box-shadow: 0px 0px 13px 2px $close-color;
+      -moz-box-shadow: 0px 0px 13px 2px $close-color;
+      box-shadow: 0px 0px 13px 2px $close-color;
+      padding: 25px;
+      position: relative;
+
+      textarea {
+        width: 100%;
+        height: 110px;
+        padding: 10px;
+        border-radius: 3px;
+        outline: none;
+        border: 1px solid $primary-color-text;
+        font-size: 16px !important;
+        margin-top: 20px;
+        resize: none;
+        textarea:focus {
+          border: 1px solid $primary-color;
+        }
+      }
+      .blocking_mode {
+        div {
+          font-size: 14px;
+          background-color: $primary-color-text;
+          padding: 5px 10px;
+          border-radius: 20px;
+          color: $accent-color;
+          margin-top: 10px;
+          cursor: pointer;
+        }
+        div:hover {
+          
+          background-color: $divider-color-text;
+        }
+      }
+      .btn {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+      button {
+        width: 120px;
+        height: 30px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-top: 15px;
+        background-color: $close-color;
+      }
+      button:hover {
+        -webkit-box-shadow: 0px 0px 13px 2px $close-color;
+        -moz-box-shadow: 0px 0px 13px 2px $close-color;
+        box-shadow: 0px 0px 13px 2px $close-color;
+      }
+      .close_bloced_page {
+        background: transparent;
+        border: 2px solid $close-color;
+        margin-right: 20px;
+      }
+      .close_bloced_page:hover {
+        color: $accent-color !important;
+      }
+    }
+  }
+
   // модал редактирование
 
   .modal_page_editing {
@@ -557,15 +660,16 @@ textarea::-webkit-scrollbar-thumb,
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     color: $accent-color;
     .modal_item {
       width: 700px;
-      height: auto;
+      max-height: 99%;
       background-color: $divider-color;
       border-radius: 10px;
+      overflow-y: scroll
     }
     .modal_header {
       @include d-center();
@@ -606,14 +710,17 @@ textarea::-webkit-scrollbar-thumb,
         }
 
       }
-      .choose_list {
+      .choose_list{
         margin: 15px 0;
         @include d-space();
         .left_choose,
-        .right_choose {
+        .left_choose_vacancy,
+        .right_choose,
+          .right_choose_vacancy {
           position: relative;
         }
         .profession,
+        .profession_vacancy,
         .direction {
           display: flex;
           align-items: center;
@@ -727,62 +834,10 @@ textarea::-webkit-scrollbar-thumb,
         }
       }
     }
-    .bloced_page {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #0006;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 101;
-    }
-    .blocked_text {
-      width: 650px;
-      height: 250px;
-      border-radius: 10px;
-      background-color: $divider-color;
-      -webkit-box-shadow: 0px 0px 13px 2px $close-color;
-      -moz-box-shadow: 0px 0px 13px 2px $close-color;
-      box-shadow: 0px 0px 13px 2px $close-color;
-      padding: 25px;
-
-      textarea {
-        width: 100%;
-        height: 110px;
-        padding: 10px;
-        border-radius: 3px;
-        outline: none;
-        border: 1px solid $primary-color-text;
-        font-size: 16px !important;
-        margin-top: 20px;
-        resize: none;
-        textarea:focus {
-          border: 1px solid $primary-color;
-        }
-      }
-      .btn {
-        display: flex;
-        align-items: flex-end;
-      }
-      button {
-        width: 120px;
-        height: 30px;
-        border-radius: 20px;
-        cursor: pointer;
-        margin-left: auto;
-        margin-top: 15px;
-        background-color: $close-color;
-      }
-      button:hover {
-        -webkit-box-shadow: 0px 0px 13px 2px $close-color;
-        -moz-box-shadow: 0px 0px 13px 2px $close-color;
-        box-shadow: 0px 0px 13px 2px $close-color;
-      }
-    }
   }
 
-  .key_skills {
+  .key_skills,
+  .key_skills_vacancy {
     position: relative;
     input {
       width: 100%;
@@ -806,7 +861,8 @@ textarea::-webkit-scrollbar-thumb,
       cursor: pointer;
       display: none;
     }
-    .key_skills_list {
+    .key_skills_list,
+    .key_skills_list_vacancy {
       width: 100%;
       height: auto;
       border-radius: 20px;
@@ -814,6 +870,7 @@ textarea::-webkit-scrollbar-thumb,
       padding: 15px 10px;
       position: absolute;
       display: none;
+      z-index: 1000px;
       .fa-times-circle {
         position: absolute;
         top: 15px;
@@ -833,10 +890,15 @@ textarea::-webkit-scrollbar-thumb,
           border-radius: 5px;
           margin: 5px;
           cursor: pointer;
+          font-size: 13.5px;
+        }
+        li:hover {
+          background-color: $divider-color-light;
         }
       }
     }
-    .added_keys {
+    .added_keys,
+    .added_keys_vacancy {
       display: flex;
       flex-wrap: wrap;
       div {
@@ -861,6 +923,7 @@ textarea::-webkit-scrollbar-thumb,
   .budget,
   .responses,
   .user,
+  .userVacancy,
   .status {
     margin-top: 10px;
     margin-left: 10px;
@@ -868,13 +931,20 @@ textarea::-webkit-scrollbar-thumb,
       font-weight: 500;
       padding-right: 10px;
     }
-    i {
+    #activeText {
       padding-right: 10px;
       color: $primary-color;
+      display: none;
     }
-    strong {
+    #blockingText {
+      padding-right: 10px;
+      color: red;
+      display: none;
+    }
+    #dataStatus {
       font-weight: 600;
       font-size: 14px;
+      display: none;
     }
     big {
       color: $primary-color;
@@ -899,6 +969,85 @@ textarea::-webkit-scrollbar-thumb,
     }
   }
 
+  .work_time {
+    display: flex;
+    align-items: center;
+    margin: 20px 10px;
+    h6 {
+      font-size: 16px;
+      font-weight: 500;
+      padding-right: 30px;
+    }
+  }
+
+  .input__block_main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .input__block {
+    margin-left: 20px;
+  }
+.banner__radio_block{
+  margin-left: 15px;
+  height: 59px;
+  flex-direction: column;
+  justify-content: center;
+  width: 0;
+  transition: 0.3s;
+}
+.main_bottom{
+  padding-top: 45px;
+}
+.banner__radio{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  // position: relative;
+  cursor: pointer;
+}
+.banner__radio:last-child{
+  margin-bottom: 0;
+}
+.banner__radio label{
+  margin-left: 10px;
+  font-size: 13px;
+  color: #253556;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.banner__radio input{
+  width: 17px;
+  height: 17px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.banner__radio_icon{
+  width: 17px;
+  height: 17px;
+  border: 1px solid #253556;
+  background-color: transparent;
+  border-radius: 3px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner__radio_icon i{
+  color: $divider-color;
+  font-size: 12px;
+  
+}
+.banner__radio input:checked + .banner__radio_icon{
+  background-color: #00CF4D;
+  border-color: #00CF4D;
+}
+.banner__radio input:checked ~ label{
+  color: #00CF4D;
+}
+
   .middle_btns {
     margin-top: 20px;
     button {
@@ -918,7 +1067,7 @@ textarea::-webkit-scrollbar-thumb,
 }
   }
 
-  .buttons {
+ .modal_page_editing .buttons {
     margin-top: 45px;
     margin-bottom: 20px;
     @include d-center();
@@ -947,8 +1096,8 @@ textarea::-webkit-scrollbar-thumb,
 
   .user_page {
     position: absolute;
-    top: 55px;
-    right: 330px;
+    top: 60px;
+    right: 320px;
     width: 430px;
     height: 320px;
     background-color: $divider-color-light;
@@ -1027,6 +1176,11 @@ textarea::-webkit-scrollbar-thumb,
         }
       }
     }
+  }
+
+  .user_page_vacancy {
+    right: 360px;
+    top: 120px;
   }
 
   
