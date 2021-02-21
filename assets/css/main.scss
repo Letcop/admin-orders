@@ -598,6 +598,7 @@ textarea::-webkit-scrollbar-thumb,
         outline: none;
         border: 1px solid $primary-color-text;
         font-size: 16px !important;
+        font-family: 'Montserrat', sans-serif !important;
         margin-top: 20px;
         resize: none;
         textarea:focus {
@@ -680,7 +681,8 @@ textarea::-webkit-scrollbar-thumb,
         font-weight: 600;
         padding: 20px 0;
       }
-      .close_editing {
+      .close_editing,
+      .close_editing_vacancy {
         position: absolute;
         top: 5px;
         right: 5px;
@@ -800,6 +802,7 @@ textarea::-webkit-scrollbar-thumb,
           height: 70px;
           overflow-y: scroll;
           font-size: 14px;
+          font-family: 'Montserrat', sans-serif !important;
           padding: 5px 10px;
           border-radius: 5px;
           border: none;
@@ -931,17 +934,20 @@ textarea::-webkit-scrollbar-thumb,
       font-weight: 500;
       padding-right: 10px;
     }
-    #activeText {
+    #activeText,
+    #activeTextVacancy {
       padding-right: 10px;
       color: $primary-color;
       display: none;
     }
-    #blockingText {
+    #blockingText,
+     #blockingTextVacancy{
       padding-right: 10px;
       color: red;
       display: none;
     }
-    #dataStatus {
+    #dataStatus,
+    #dataStatusVacancy {
       font-weight: 600;
       font-size: 14px;
       display: none;
@@ -1056,11 +1062,13 @@ textarea::-webkit-scrollbar-thumb,
       border-radius: 20px;
       cursor: pointer;
     }
-    .blocked_order {
+    .blocked_order,
+    .blocked_edit_vacancy {
       background-color: $close-color;
       margin-left: 15px;
     }
-.blocked_order:hover {
+.blocked_order:hover,
+.blocked_edit_vacancy:hover {
   -webkit-box-shadow: 0px 0px 13px 2px $close-color;
   -moz-box-shadow: 0px 0px 13px 2px $close-color;
   box-shadow: 0px 0px 13px 2px $close-color;
@@ -1083,11 +1091,13 @@ textarea::-webkit-scrollbar-thumb,
     button:hover {
       color: $accent-color !important;
     }
-    .save_btn {
+    .save_btn,
+    .save_vacancy_btn {
       background-color: $primary-color-text;
       border: 2px solid $primary-color;
     }
-    .remove_btn {
+    .remove_btn,
+    .remove_vacancy_btn {
       margin-left: 25px;
       background-color: $primary-color-text;
       border: 2px solid $close-color;

@@ -864,6 +864,7 @@ textarea::-webkit-scrollbar-thumb,
   outline: none;
   border: 1px solid #ffffff;
   font-size: 16px !important;
+  font-family: 'Montserrat', sans-serif !important;
   margin-top: 20px;
   resize: none;
 }
@@ -970,7 +971,8 @@ textarea::-webkit-scrollbar-thumb,
   padding: 20px 0;
 }
 
-.page_ordersAndVacancies .modal_page_editing .modal_header .close_editing {
+.page_ordersAndVacancies .modal_page_editing .modal_header .close_editing,
+.page_ordersAndVacancies .modal_page_editing .modal_header .close_editing_vacancy {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -1140,6 +1142,7 @@ textarea::-webkit-scrollbar-thumb,
   height: 70px;
   overflow-y: scroll;
   font-size: 14px;
+  font-family: 'Montserrat', sans-serif !important;
   padding: 5px 10px;
   border-radius: 5px;
   border: none;
@@ -1326,30 +1329,45 @@ textarea::-webkit-scrollbar-thumb,
 }
 
 .page_ordersAndVacancies .budget #activeText,
+.page_ordersAndVacancies .budget #activeTextVacancy,
 .page_ordersAndVacancies .responses #activeText,
+.page_ordersAndVacancies .responses #activeTextVacancy,
 .page_ordersAndVacancies .user #activeText,
+.page_ordersAndVacancies .user #activeTextVacancy,
 .page_ordersAndVacancies .userVacancy #activeText,
-.page_ordersAndVacancies .status #activeText {
+.page_ordersAndVacancies .userVacancy #activeTextVacancy,
+.page_ordersAndVacancies .status #activeText,
+.page_ordersAndVacancies .status #activeTextVacancy {
   padding-right: 10px;
   color: #00cf4d;
   display: none;
 }
 
 .page_ordersAndVacancies .budget #blockingText,
+.page_ordersAndVacancies .budget #blockingTextVacancy,
 .page_ordersAndVacancies .responses #blockingText,
+.page_ordersAndVacancies .responses #blockingTextVacancy,
 .page_ordersAndVacancies .user #blockingText,
+.page_ordersAndVacancies .user #blockingTextVacancy,
 .page_ordersAndVacancies .userVacancy #blockingText,
-.page_ordersAndVacancies .status #blockingText {
+.page_ordersAndVacancies .userVacancy #blockingTextVacancy,
+.page_ordersAndVacancies .status #blockingText,
+.page_ordersAndVacancies .status #blockingTextVacancy {
   padding-right: 10px;
   color: red;
   display: none;
 }
 
 .page_ordersAndVacancies .budget #dataStatus,
+.page_ordersAndVacancies .budget #dataStatusVacancy,
 .page_ordersAndVacancies .responses #dataStatus,
+.page_ordersAndVacancies .responses #dataStatusVacancy,
 .page_ordersAndVacancies .user #dataStatus,
+.page_ordersAndVacancies .user #dataStatusVacancy,
 .page_ordersAndVacancies .userVacancy #dataStatus,
-.page_ordersAndVacancies .status #dataStatus {
+.page_ordersAndVacancies .userVacancy #dataStatusVacancy,
+.page_ordersAndVacancies .status #dataStatus,
+.page_ordersAndVacancies .status #dataStatusVacancy {
   font-weight: 600;
   font-size: 14px;
   display: none;
@@ -1516,12 +1534,14 @@ textarea::-webkit-scrollbar-thumb,
   cursor: pointer;
 }
 
-.page_ordersAndVacancies .middle_btns .blocked_order {
+.page_ordersAndVacancies .middle_btns .blocked_order,
+.page_ordersAndVacancies .middle_btns .blocked_edit_vacancy {
   background-color: #ff8fb4;
   margin-left: 15px;
 }
 
-.page_ordersAndVacancies .middle_btns .blocked_order:hover {
+.page_ordersAndVacancies .middle_btns .blocked_order:hover,
+.page_ordersAndVacancies .middle_btns .blocked_edit_vacancy:hover {
   -webkit-box-shadow: 0px 0px 13px 2px #ff8fb4;
   box-shadow: 0px 0px 13px 2px #ff8fb4;
 }
@@ -1553,12 +1573,14 @@ textarea::-webkit-scrollbar-thumb,
   color: #253556 !important;
 }
 
-.page_ordersAndVacancies .modal_page_editing .buttons .save_btn {
+.page_ordersAndVacancies .modal_page_editing .buttons .save_btn,
+.page_ordersAndVacancies .modal_page_editing .buttons .save_vacancy_btn {
   background-color: #ffffff;
   border: 2px solid #00cf4d;
 }
 
-.page_ordersAndVacancies .modal_page_editing .buttons .remove_btn {
+.page_ordersAndVacancies .modal_page_editing .buttons .remove_btn,
+.page_ordersAndVacancies .modal_page_editing .buttons .remove_vacancy_btn {
   margin-left: 25px;
   background-color: #ffffff;
   border: 2px solid #ff8fb4;

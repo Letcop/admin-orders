@@ -72,6 +72,17 @@ let btnAddKeysVacancy = document.querySelector('.key_skills_vacancy .addKeysVaca
 let keyVacancySkillsList = document.querySelectorAll('.key_skills_list_vacancy li');
 let userInfoOpenVacancy = document.querySelector('.modal_body .userVacancy big');
 let userVageVacancy = document.querySelector('.user_page_vacancy');
+let closeEditingVacancy = document.querySelector('.close_editing_vacancy');
+let activeTextVacancy = document.getElementById('activeTextVacancy');
+let blockingTextVacancy = document.getElementById('blockingTextVacancy');
+let dataStatusVacancy = document.getElementById('dataStatusVacancy');
+let noStatusVacancy = document.getElementById('noStatusVacancy');
+let saveVacancyBtn = document.querySelector('.save_vacancy_btn');
+let removeVacancyBtn = document.querySelector('.remove_vacancy_btn');
+let activedEditVacancy = document.querySelector('.actived_edit_vacancy');
+let blockedEditVacancy = document.querySelector('.blocked_edit_vacancy');
+
+
 
 
 
@@ -210,6 +221,13 @@ chat.addEventListener('click', () => {
       })
 
       
+
+ blockingMode.forEach(text => {
+  text.addEventListener('click', () => {
+    blockedTextList.value = text.textContent;
+
+  })
+});
     })
   });
   
@@ -396,8 +414,9 @@ userInfoOpen.addEventListener('click', () => {
   userEditWrapper.style.display = 'flex'
 });
 
-saveBtn.addEventListener('click', () => {
-  saveModal.style.display = 'flex'
+saveVacancyBtn.addEventListener('click', () => {
+  // saveModal.style.display = 'flex'
+  // alert()
 })
 
 
@@ -435,7 +454,6 @@ keySkillsList.forEach(elem => {
 })
 
 closeKeys.addEventListener('click', () => {
-  console.dir(closeKeys)
   skillsList.style.display = 'none'
   keySkills.classList.remove('key_skills_input');
 });
@@ -470,12 +488,6 @@ keySkills.addEventListener('keyup', () => {
     })
   })
 
- });
-
- blockingMode.forEach(text => {
-   text.addEventListener('click', () => {
-     blockedTextList.innerText = text.textContent
-   })
  });
 
  activedOrderBtn.addEventListener('click', () => {
@@ -608,11 +620,11 @@ keySkills.addEventListener('keyup', () => {
     active.style.display = 'revert'
      active.children[3].children[2].style.display = 'block'
      active.children[3].children[0].style.display = 'none'
-     activeText.style.display = 'inline-block'
-     noStatus.style.display = 'none'
-     blockingText.style.display = 'none'
-     blockedOrderBtn.style.display = 'block'
-     activedOrderBtn.style.display = 'none'
+     activeTextVacancy.style.display = 'inline-block'
+     noStatusVacancy.style.display = 'none'
+     blockingTextVacancy.style.display = 'none'
+     blockedEditVacancy.style.display = 'block'
+     activedEditVacancy.style.display = 'none'
   });
 
   });
@@ -624,10 +636,10 @@ keySkills.addEventListener('keyup', () => {
       let blockedList = document.querySelectorAll('.blocked_list_vacancy');
       moderationList.forEach(moder => {
         moder.style.display = 'revert'
-        noStatus.style.display = 'inline-block'
-        blockedOrderBtn.style.display = 'inline-block'
-        activedOrderBtn.style.display = 'inline-block'
-        blockingText.style.display = 'none'
+        noStatusVacancy.style.display = 'inline-block'
+        blockedEditVacancy.style.display = 'inline-block'
+        activedEditVacancy.style.display = 'inline-block'
+        blockingTextVacancy.style.display = 'none'
       });
   
       activeList.forEach(active => {
@@ -648,11 +660,11 @@ keySkills.addEventListener('keyup', () => {
     blockedList.forEach(blocked => {
       blocked.style.display = 'revert'
       blocked.children[3].children[0].style.display = 'block'
-      blockingText.style.display = 'inline-block'
-      dataStatus.style.display = 'inline-block'
-      noStatus.style.display = 'none'
-      blockedOrderBtn.style.display = 'none'
-      activeText.style.display = 'none'
+      blockingTextVacancy.style.display = 'inline-block'
+      dataStatusVacancy.style.display = 'inline-block'
+      noStatusVacancy.style.display = 'none'
+      blockedEditVacancy.style.display = 'none'
+      activeTextVacancy.style.display = 'none'
     });
 
     moderationList.forEach(moder => {
@@ -794,17 +806,26 @@ keyVacancySkills.addEventListener('keyup', () => {
 
  blockingMode.forEach(text => {
    text.addEventListener('click', () => {
-     blockedTextList.innerText = text.textContent
+     blockedTextList.value = text.textContent
    })
  });
 
- activedOrderBtn.addEventListener('click', () => {
-  activedOrderBtn.style.display = 'none'
-   noStatus.style.display = 'none'
-   activeText.style.display = 'inline-block'
-   blockingText.style.display = 'none'
-   blockedOrderBtn.style.display = 'inline-block'
+ activedEditVacancy.addEventListener('click', () => {
+  activedEditVacancy.style.display = 'none'
+   noStatusVacancy.style.display = 'none'
+   activeTextVacancy.style.display = 'inline-block'
+   blockingTextVacancy.style.display = 'none'
+   blockedEditVacancy.style.display = 'inline-block'
  });
+
+ blockedEditVacancy.addEventListener('click', () => {
+  blockedTextVacancy.style.display = 'flex'
+  activedEditVacancy.style.display = 'inline-block'
+   noStatusVacancy.style.display = 'none'
+   activeTextVacancy.style.display = 'none'
+   blockingTextVacancy.style.display = 'inline-block'
+   blockedEditVacancy.style.display = 'none'
+});
 
  userInfoOpenVacancy.addEventListener('mouseover', () => {
    userVageVacancy.style.display = 'block'
@@ -818,4 +839,8 @@ keyVacancySkills.addEventListener('keyup', () => {
  userInfoOpenVacancy.addEventListener('click', () => {
   userEditWrapper.style.display = 'flex'
 });
+
+closeEditingVacancy.addEventListener('click', () => {
+  editModalVacancy.style.display = 'none'
+})
 })()
