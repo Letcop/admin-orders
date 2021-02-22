@@ -1008,8 +1008,10 @@ textarea::-webkit-scrollbar-thumb,
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  // position: relative;
   cursor: pointer;
+}
+.block_banner_radio {
+  position: relative;
 }
 .banner__radio:last-child{
   margin-bottom: 0;
@@ -1026,6 +1028,7 @@ textarea::-webkit-scrollbar-thumb,
   height: 17px;
   opacity: 0;
   position: absolute;
+  // z-index: -1;
   top: 0;
   left: 0;
   cursor: pointer;

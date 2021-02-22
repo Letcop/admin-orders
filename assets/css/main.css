@@ -1467,6 +1467,10 @@ textarea::-webkit-scrollbar-thumb,
   cursor: pointer;
 }
 
+.page_ordersAndVacancies .block_banner_radio {
+  position: relative;
+}
+
 .page_ordersAndVacancies .banner__radio:last-child {
   margin-bottom: 0;
 }

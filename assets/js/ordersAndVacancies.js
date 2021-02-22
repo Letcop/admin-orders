@@ -81,6 +81,7 @@ let saveVacancyBtn = document.querySelector('.save_vacancy_btn');
 let removeVacancyBtn = document.querySelector('.remove_vacancy_btn');
 let activedEditVacancy = document.querySelector('.actived_edit_vacancy');
 let blockedEditVacancy = document.querySelector('.blocked_edit_vacancy');
+let blockbannerRadio = document.querySelectorAll('.banner__radio')
 
 
 
@@ -738,6 +739,10 @@ professionVacancy.addEventListener('click', () => {
 
 keyVacancySkills.addEventListener('click', () => {
   skillsListVacancy.style.display = 'block';
+  blockbannerRadio.forEach(elem => {
+    elem.classList.remove('block_banner_radio')
+  })
+  console.dir(blockbannerRadio)
   keyVacancySkills.nextElementSibling.classList.add('key_skills_class');
   keyVacancySkills.classList.add('key_skills_input');
 });
@@ -770,6 +775,9 @@ keyVacancySkillsList.forEach(elem => {
 closeKeysVacancy.addEventListener('click', () => {
   skillsListVacancy.style.display = 'none'
   keyVacancySkills.classList.remove('key_skills_input');
+  blockbannerRadio.forEach(elem => {
+    elem.classList.add('block_banner_radio')
+  });
 });
 
 keyVacancySkills.addEventListener('keyup', () => {
@@ -819,7 +827,7 @@ keyVacancySkills.addEventListener('keyup', () => {
  });
 
  blockedEditVacancy.addEventListener('click', () => {
-  blockedTextVacancy.style.display = 'flex'
+  blockingTextVacancy.style.display = 'inline-block'
   activedEditVacancy.style.display = 'inline-block'
    noStatusVacancy.style.display = 'none'
    activeTextVacancy.style.display = 'none'
