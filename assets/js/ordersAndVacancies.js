@@ -47,7 +47,13 @@ let activeText = document.getElementById('activeText');
 let blockingText = document.getElementById('blockingText');
 let dataStatus = document.getElementById('dataStatus');
 let noStatus = document.getElementById('noStatus');
+let activeOrders = document.querySelector('.active_orders')
 // End orders keys
+
+
+
+
+
 
 // Start vacancy keys
 
@@ -81,9 +87,19 @@ let saveVacancyBtn = document.querySelector('.save_vacancy_btn');
 let removeVacancyBtn = document.querySelector('.remove_vacancy_btn');
 let activedEditVacancy = document.querySelector('.actived_edit_vacancy');
 let blockedEditVacancy = document.querySelector('.blocked_edit_vacancy');
-let blockbannerRadio = document.querySelectorAll('.banner__radio')
+let blockbannerRadio = document.querySelectorAll('.banner__radio');
+let activeVacancy = document.querySelector('.active_vacancy');
 
 
+function addScrollHeight() {
+  if(activeOrders.clientHeight == 400) {
+    activeOrders.classList.add('addScrollList')
+  }
+   else if(activeVacancy.clientHeight == 400) {
+    activeVacancy.classList.add('addScrollList')
+  }
+}
+addScrollHeight()
 
 
 
@@ -271,6 +287,7 @@ chat.addEventListener('click', () => {
       blockedOrderBtn.style.display = 'inline-block'
       activedOrderBtn.style.display = 'inline-block'
       blockingText.style.display = 'none'
+      dataStatus.style.display = 'none'
     });
 
     activeList.forEach(active => {
@@ -388,16 +405,37 @@ direction.addEventListener('click', () => {
 // Блокировать
 
 blockedOrderBtn.addEventListener('click', () => {
+
   blockedText.style.display = 'flex'
-  activedOrderBtn.style.display = 'inline-block'
-   noStatus.style.display = 'none'
-   activeText.style.display = 'none'
-   blockingText.style.display = 'inline-block'
-   blockedOrderBtn.style.display = 'none'
+  blockingOrder.addEventListener('click', handleClick1)
+
+  function handleClick1() {
+   if(blockedTextList.value == '') {
+     blockedTextList.style.border = '2px solid red'
+   }
+   else {
+     blockedModal.style.display = 'flex'
+    
+     setTimeout(function() {
+       blockedModal.style.display = 'none'
+       blockedText.style.display = 'none'
+       activedOrderBtn.style.display = 'inline-block'
+        noStatus.style.display = 'none'
+        activeText.style.display = 'none'
+        blockingText.style.display = 'inline-block'
+        blockedOrderBtn.style.display = 'none'
+        blockedTextList.value == ''
+        blockedTextList.style.border = 'none'
+        dataStatus.style.display = 'inline-block'
+     }, 1500)
+   }
+  }
 });
 
 blockedEditBtn.addEventListener('click', () => {
   blockedText.style.display = 'none'
+  blockedTextList.value == ''
+  blockedTextList.style.border = 'none'
 });
 
 closeBlocedPage.addEventListener('click', () => {
@@ -504,7 +542,7 @@ keySkills.addEventListener('keyup', () => {
 
 
 
-// Start vacancy page
+// Start vacancy page********************
 
 (function handleVacancyPage() {
 
@@ -641,6 +679,7 @@ keySkills.addEventListener('keyup', () => {
         blockedEditVacancy.style.display = 'inline-block'
         activedEditVacancy.style.display = 'inline-block'
         blockingTextVacancy.style.display = 'none'
+        dataStatusVacancy.style.display = 'none'
       });
   
       activeList.forEach(active => {
@@ -824,16 +863,43 @@ keyVacancySkills.addEventListener('keyup', () => {
    activeTextVacancy.style.display = 'inline-block'
    blockingTextVacancy.style.display = 'none'
    blockedEditVacancy.style.display = 'inline-block'
+   dataStatusVacancy.style.display = 'inline-block'
  });
 
  blockedEditVacancy.addEventListener('click', () => {
-  blockingTextVacancy.style.display = 'inline-block'
-  activedEditVacancy.style.display = 'inline-block'
-   noStatusVacancy.style.display = 'none'
-   activeTextVacancy.style.display = 'none'
-   blockingTextVacancy.style.display = 'inline-block'
-   blockedEditVacancy.style.display = 'none'
+   blockedText.style.display = 'flex'
+
+   blockingOrder.addEventListener('click', handleClick)
+
+   function handleClick() {
+    if(blockedTextList.value == '') {
+      blockedTextList.style.border = '2px solid red'
+    }
+    else {
+      blockedModal.style.display = 'flex'
+     
+      setTimeout(function() {
+        blockedModal.style.display = 'none'
+        blockedText.style.display = 'none'
+        activedEditVacancy.style.display = 'inline-block'
+        noStatusVacancy.style.display = 'none'
+        activeTextVacancy.style.display = 'none'
+        blockingTextVacancy.style.display = 'inline-block'
+        blockedEditVacancy.style.display = 'none'
+        dataStatusVacancy.style.display = 'inline-block'
+      }, 1500)
+    }
+   }
+
+    
+
 });
+
+
+   blockingOrder.addEventListener('click', () => {
+   })
+
+
 
  userInfoOpenVacancy.addEventListener('mouseover', () => {
    userVageVacancy.style.display = 'block'

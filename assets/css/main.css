@@ -620,7 +620,8 @@ textarea::-webkit-scrollbar-thumb,
 
 .page_ordersAndVacancies .orders_page .sub_titles .search_orders input:focus,
 .page_ordersAndVacancies .vacancy_page .sub_titles .search_orders input:focus {
-  border: 1px solid #00cf4d;
+  border: 2px solid #00cf4d;
+  border-right: none;
 }
 
 .page_ordersAndVacancies .orders_page .sub_titles .search_orders .search_btn,
@@ -642,12 +643,16 @@ textarea::-webkit-scrollbar-thumb,
   border-bottom-right-radius: 10px;
 }
 
+.page_ordersAndVacancies .orders_page .addScrollList,
+.page_ordersAndVacancies .vacancy_page .addScrollList {
+  overflow-y: scroll;
+}
+
 .page_ordersAndVacancies .orders_page .active_orders,
 .page_ordersAndVacancies .orders_page .active_vacancy,
 .page_ordersAndVacancies .vacancy_page .active_orders,
 .page_ordersAndVacancies .vacancy_page .active_vacancy {
   max-height: 400px;
-  overflow-y: scroll;
 }
 
 .page_ordersAndVacancies .orders_page .active_orders th,
@@ -694,7 +699,7 @@ textarea::-webkit-scrollbar-thumb,
 .page_ordersAndVacancies .vacancy_page .active_vacancy td i {
   font-size: 24px;
   cursor: pointer;
-  padding-right: 10px;
+  margin-right: 10px;
 }
 
 .page_ordersAndVacancies .orders_page .active_orders .order_item,
@@ -1565,7 +1570,8 @@ textarea::-webkit-scrollbar-thumb,
 }
 
 .page_ordersAndVacancies .modal_page_editing .buttons button {
-  padding: 10px 25px;
+  width: 220px;
+  height: 35px;
   border-radius: 20px;
   cursor: pointer;
   text-transform: uppercase;

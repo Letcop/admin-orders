@@ -443,7 +443,8 @@ textarea::-webkit-scrollbar-thumb,
         border-right: none;
       }
       input:focus {
-        border: 1px solid $primary-color;
+        border: 2px solid $primary-color;
+        border-right: none;
       }
       .search_btn {
         width: 30px;
@@ -457,11 +458,13 @@ textarea::-webkit-scrollbar-thumb,
     }
     }
 
+    .addScrollList {
+      overflow-y: scroll;
+    }
 
     .active_orders,
     .active_vacancy {
       max-height: 400px;
-      overflow-y: scroll;
   
       th {
         font-size: 14px;
@@ -483,7 +486,7 @@ textarea::-webkit-scrollbar-thumb,
         i {
           font-size: 24px;
           cursor: pointer;
-          padding-right: 10px;
+          margin-right: 10px;
         }
       }
       
@@ -1084,7 +1087,9 @@ textarea::-webkit-scrollbar-thumb,
     @include d-center();
 
     button {
-      padding: 10px 25px;
+      // padding: 10px 25px;
+      width: 220px;
+      height: 35px;
       border-radius: 20px;
       cursor: pointer;
       text-transform: uppercase;
